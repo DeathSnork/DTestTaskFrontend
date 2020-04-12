@@ -1,0 +1,50 @@
+<div align="center">
+  <form class="form">
+    <div class="full-width">
+      <mat-form-field class="width-80">
+        <mat-label>User Id</mat-label>
+        <input matInput #id>
+      </mat-form-field>
+      <button class="width-20" type="button" (click)="getUser(id.value)" mat-button>Get User</button>
+    </div>
+    <mat-form-field class="full-width">
+      <mat-label>FirstName</mat-label>
+      <input readonly matInput placeholder="FirstName" value="{{user.firstName}}">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>LastName</mat-label>
+      <input readonly matInput placeholder="LastName" value="{{user.lastName}}">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <mat-label>DOB</mat-label>
+      <input readonly matInput placeholder="2020-03-01" value="{{user.DOB}}">
+    </mat-form-field>
+      <label class="center-label">Address</label>
+      <form class="form">
+        <mat-form-field class="full-width">
+          <mat-label>Address Id</mat-label>
+          <input readonly matInput placeholder="Address Id" value="{{user.address.id}}">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Street</mat-label>
+          <input readonly matInput placeholder="Street" value="{{user.address.street}}">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>City</mat-label>
+          <input readonly matInput placeholder="City" value="{{user.address.city}}">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>stateOrProvince</mat-label>
+          <input readonly matInput placeholder="stateOrProvince" value="{{user.address.stateOrProvince}}">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>PostalCode</mat-label>
+          <input readonly matInput placeholder="PostalCode" value="{{user.address.postalCode}}">
+        </mat-form-field>
+        <mat-form-field class="full-width">
+          <mat-label>Country</mat-label>
+          <input readonly matInput placeholder="Country" value="{{user.address.country}}">
+        </mat-form-field>
+      </form>
+  </form>
+</div>
